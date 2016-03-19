@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title Login
+    link(rel='stylesheet', href='/stylesheets/Login_Logout/style.css')
+  body
+    .container
+      #login-form
+        h3 Sign Up
+        fieldset
+          form(method='POST', action='/register')
+            | Type Your Username:
+            input(type='text', name='username', required='')
+            | Type Your Email id:
+            input(type='Email', name='email_id', required='')
+            // JS because of IE support; better: placeholder="Email"
+            | Type Your Password:
+            input(type='password', name='password', required='')
+            // JS because of IE support; better: placeholder="Password"
+            | Re-Type Your Password:
+            input(type='password', name='password_1', required='')
+            // JS because of IE support; better: placeholder="Password"
+            input(type='submit', value='Sign Up')
+            footer.clearfix
+              a(href='/') Login
+      // end login-form
